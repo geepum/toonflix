@@ -12,29 +12,41 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          backgroundColor: Colors.red.shade100,
-          body: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Column(
-                    children: [
-                      SizedBox(
-                        height: 80,
-                      ),
-                      Text(
-                        'Terry',
-                        style: TextStyle(
-                          color: Colors.blueGrey.shade900,
+          backgroundColor: const Color.fromARGB(255, 3, 255, 163),
+          body: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15.0),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        const SizedBox(
+                          height: 80,
                         ),
-                      ),
-                      Text('June'),
-                    ],
-                  )
-                ],
-              )
-            ],
+                        Text(
+                          'Terry',
+                          style: TextStyle(
+                            color: Colors.blueGrey.shade900,
+                            fontSize: 40.0,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        Text(
+                          'June',
+                          style: TextStyle(
+                            color: Colors.black54.withOpacity(0.7),
+                            fontSize: 25.0,
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                )
+              ],
+            ),
           )),
     );
   }
