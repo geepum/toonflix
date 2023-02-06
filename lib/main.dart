@@ -12,86 +12,98 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 3, 255, 163),
+        backgroundColor: Colors.black54,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 40.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(
+                height: 80.0,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      const SizedBox(
-                        height: 80,
-                      ),
                       Text(
                         'Hey, Terry',
                         style: TextStyle(
-                          color: Colors.blueGrey.shade900,
-                          fontSize: 40.0,
-                          fontWeight: FontWeight.w600,
+                          color: Colors.white.withOpacity(0.8),
+                          fontSize: 40,
+                          fontWeight: FontWeight.w800,
                         ),
                       ),
                       Text(
                         'Welcome back',
                         style: TextStyle(
-                          color: Colors.black54.withOpacity(0.7),
-                          fontSize: 25.0,
+                          color: Colors.white.withOpacity(0.6),
+                          fontSize: 20,
+                          // fontWeight: FontWeight.w800,
                         ),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
               const SizedBox(
-                height: 120,
-              ),
-              Text(
-                'Total Balance',
-                style: TextStyle(
-                  color: Colors.black54.withOpacity(0.8),
-                  fontSize: 22,
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              const Text(
-                '\$5 194 482',
-                style: TextStyle(
-                  color: Colors.black87,
-                  fontSize: 44,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              const SizedBox(
-                height: 20,
+                height: 60.0,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.amber,
-                      borderRadius: BorderRadius.circular(45.0),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 50.0,
-                        vertical: 20.0,
-                      ),
-                      child: Text(
-                        'Transfer',
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Total Balance',
                         style: TextStyle(
-                          fontSize: 22.0,
+                          color: Colors.white.withOpacity(0.5),
+                          fontSize: 30,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
-                    ),
-                  )
+                      const SizedBox(
+                        height: 15.0,
+                      ),
+                      Text(
+                        '\$5 000 000',
+                        style: TextStyle(
+                          color: Colors.white.withOpacity(0.8),
+                          fontSize: 40,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 30.0,
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(40.0),
+                              color: Colors.amber.shade500,
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.symmetric(
+                                vertical: 15.0,
+                                horizontal: 40.0,
+                              ),
+                              child: Text(
+                                'Transfer',
+                                style: TextStyle(
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ],
-              )
+              ),
             ],
           ),
         ),
