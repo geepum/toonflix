@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toonflix/widgets/button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.black54,
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40.0),
+          padding: const EdgeInsets.symmetric(horizontal: 30.0),
           child: Column(
             children: [
               const SizedBox(
@@ -77,31 +78,22 @@ class MyApp extends StatelessWidget {
                       const SizedBox(
                         height: 30.0,
                       ),
-                      Row(
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(40.0),
-                              color: Colors.amber.shade500,
-                            ),
-                            child: const Padding(
-                              padding: EdgeInsets.symmetric(
-                                vertical: 15.0,
-                                horizontal: 40.0,
-                              ),
-                              child: Text(
-                                'Transfer',
-                                style: TextStyle(
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
                     ],
                   ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Button(
+                      text: 'transfer',
+                      bgColor: Colors.amber.shade500,
+                      textColor: Colors.black87),
+                  Button(
+                    text: 'Request',
+                    bgColor: Colors.grey.shade800,
+                    textColor: Colors.white70,
+                  )
                 ],
               ),
             ],
