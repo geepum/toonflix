@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toonflix/classes/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.black54,
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40.0),
+          padding: const EdgeInsets.symmetric(horizontal: 30.0),
           child: Column(
             children: [
               const SizedBox(
@@ -25,85 +26,69 @@ class MyApp extends StatelessWidget {
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Text(
-                        'Hey, Terry',
-                        style: TextStyle(
-                          color: Colors.white.withOpacity(0.8),
-                          fontSize: 40,
-                          fontWeight: FontWeight.w800,
-                        ),
+                    children: const [
+                      Words(
+                          words: 'Hey, Terry',
+                          wordsColor: Colors.white,
+                          wordsSize: 30.0,
+                          wordsWeight: FontWeight.w700),
+                      SizedBox(
+                        height: 10.0,
                       ),
-                      Text(
-                        'Welcome back',
-                        style: TextStyle(
-                          color: Colors.white.withOpacity(0.6),
-                          fontSize: 20,
-                          // fontWeight: FontWeight.w800,
-                        ),
-                      ),
+                      Words(
+                          words: 'Welcome back!',
+                          wordsColor: Colors.white70,
+                          wordsSize: 15.0,
+                          wordsWeight: FontWeight.w400),
                     ],
                   ),
                 ],
               ),
               const SizedBox(
-                height: 60.0,
+                height: 50.0,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Total Balance',
-                        style: TextStyle(
-                          color: Colors.white.withOpacity(0.5),
-                          fontSize: 30,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      const SizedBox(
+                    children: const [
+                      Words(
+                          words: 'Total Balance',
+                          wordsColor: Colors.white70,
+                          wordsSize: 30.0,
+                          wordsWeight: FontWeight.w700),
+                      SizedBox(
                         height: 15.0,
                       ),
-                      Text(
-                        '\$5 000 000',
-                        style: TextStyle(
-                          color: Colors.white.withOpacity(0.8),
-                          fontSize: 40,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 30.0,
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(40.0),
-                              color: Colors.amber.shade500,
-                            ),
-                            child: const Padding(
-                              padding: EdgeInsets.symmetric(
-                                vertical: 15.0,
-                                horizontal: 40.0,
-                              ),
-                              child: Text(
-                                'Transfer',
-                                style: TextStyle(
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                      Words(
+                          words: '\$5 000 000',
+                          wordsColor: Colors.white,
+                          wordsSize: 40.0,
+                          wordsWeight: FontWeight.w900),
                     ],
-                  ),
+                  )
                 ],
               ),
+              const SizedBox(
+                height: 30.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Button(
+                      buttonColor: Colors.amber,
+                      buttonText: 'Transfer',
+                      buttonFontColor: Colors.black87,
+                      buttonFontSize: 20.0,
+                      buttonFontWeight: FontWeight.w600),
+                  Button(
+                      buttonColor: Colors.grey,
+                      buttonText: 'Request',
+                      buttonFontColor: Colors.black,
+                      buttonFontSize: 20.0,
+                      buttonFontWeight: FontWeight.w600)
+                ],
+              )
             ],
           ),
         ),
