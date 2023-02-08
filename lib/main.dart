@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.black54,
+        backgroundColor: Colors.grey[900],
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30.0),
           child: Column(
@@ -88,7 +88,86 @@ class MyApp extends StatelessWidget {
                       buttonFontSize: 20.0,
                       buttonFontWeight: FontWeight.w600)
                 ],
-              )
+              ),
+              const SizedBox(
+                height: 30.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: const [
+                  Text(
+                    'Wallets',
+                    style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 36.0,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                  Text(
+                    'View All',
+                    style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[800],
+                  borderRadius: BorderRadius.circular(30.0),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 25.0,
+                    horizontal: 20.0,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Euro',
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15.0,
+                      ),
+                      Row(
+                        children: const [
+                          Text(
+                            '6 000',
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Text(
+                            'EUR',
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
