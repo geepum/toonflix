@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:toonflix/widgets/button.dart';
-=======
-import 'package:toonflix/classes/widgets.dart';
->>>>>>> updates
+import 'package:toonflix/Widgets/buttons.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,19 +27,25 @@ class MyApp extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: const [
-                      Words(
-                          words: 'Hey, Terry',
-                          wordsColor: Colors.white,
-                          wordsSize: 30.0,
-                          wordsWeight: FontWeight.w700),
-                      SizedBox(
-                        height: 10.0,
+                      Text(
+                        'Hey, Terry',
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.w900,
+                        ),
                       ),
-                      Words(
-                          words: 'Welcome back!',
-                          wordsColor: Colors.white70,
-                          wordsSize: 15.0,
-                          wordsWeight: FontWeight.w400),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      Text(
+                        'Welcome back!',
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -56,45 +58,45 @@ class MyApp extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
-                      Words(
-                          words: 'Total Balance',
-                          wordsColor: Colors.white70,
-                          wordsSize: 30.0,
-                          wordsWeight: FontWeight.w700),
+                      Text(
+                        'Total Balance',
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
                       SizedBox(
                         height: 15.0,
                       ),
-                      Words(
-                          words: '\$5 000 000',
-                          wordsColor: Colors.white,
-                          wordsSize: 40.0,
-                          wordsWeight: FontWeight.w900),
+                      Text(
+                        '\$5 000 000',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 40.0,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
                     ],
-                  )
+                  ),
                 ],
               ),
               const SizedBox(
-                height: 30.0,
+                height: 20.0,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Button(
-                      buttonColor: Colors.amber,
-                      buttonText: 'Transfer',
-                      buttonFontColor: Colors.black87,
-                      buttonFontSize: 20.0,
-                      buttonFontWeight: FontWeight.w600),
+                      buttonColor: Color.fromRGBO(255, 179, 0, 1),
+                      buttonText: 'Transfer'),
                   Button(
-                      buttonColor: Colors.grey,
-                      buttonText: 'Request',
-                      buttonFontColor: Colors.black,
-                      buttonFontSize: 20.0,
-                      buttonFontWeight: FontWeight.w600)
+                      buttonColor: Color.fromRGBO(158, 158, 158, 1),
+                      buttonText: 'Request'),
                 ],
               ),
               const SizedBox(
-                height: 30.0,
+                height: 50.0,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -104,32 +106,32 @@ class MyApp extends StatelessWidget {
                     'Wallets',
                     style: TextStyle(
                       color: Colors.white70,
-                      fontSize: 36.0,
-                      fontWeight: FontWeight.w800,
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.w900,
                     ),
                   ),
                   Text(
                     'View All',
                     style: TextStyle(
                       color: Colors.white70,
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.w500,
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                 ],
               ),
               const SizedBox(
-                height: 20.0,
+                height: 30.0,
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey[800],
+                  color: Colors.grey[700],
                   borderRadius: BorderRadius.circular(30.0),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
-                    vertical: 25.0,
-                    horizontal: 20.0,
+                    vertical: 20.0,
+                    horizontal: 25.0,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -138,12 +140,12 @@ class MyApp extends StatelessWidget {
                         'Euro',
                         style: TextStyle(
                           color: Colors.white70,
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.w800,
+                          fontSize: 25.0,
+                          fontWeight: FontWeight.w900,
                         ),
                       ),
                       const SizedBox(
-                        height: 15.0,
+                        height: 10.0,
                       ),
                       Row(
                         children: const [
@@ -152,11 +154,11 @@ class MyApp extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.white70,
                               fontSize: 15.0,
-                              fontWeight: FontWeight.w800,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                           SizedBox(
-                            width: 10.0,
+                            width: 15.0,
                           ),
                           Text(
                             'EUR',
@@ -167,24 +169,10 @@ class MyApp extends StatelessWidget {
                             ),
                           ),
                         ],
-                      ),
+                      )
                     ],
                   ),
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Button(
-                      text: 'transfer',
-                      bgColor: Colors.amber.shade500,
-                      textColor: Colors.black87),
-                  Button(
-                    text: 'Request',
-                    bgColor: Colors.grey.shade800,
-                    textColor: Colors.white70,
-                  )
-                ],
               ),
             ],
           ),
