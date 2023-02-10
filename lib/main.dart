@@ -124,6 +124,7 @@ class MyApp extends StatelessWidget {
                 height: 30.0,
               ),
               Container(
+                clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
                   color: Colors.grey[700],
                   borderRadius: BorderRadius.circular(30.0),
@@ -175,10 +176,16 @@ class MyApp extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const Icon(
-                        Icons.euro_rounded,
-                        color: Colors.white,
-                        size: 88,
+                      Transform.scale(
+                        scale: 2.2,
+                        child: Transform.translate(
+                          offset: const Offset(5, 7),
+                          child: const Icon(
+                            Icons.euro_rounded,
+                            color: Colors.white,
+                            size: 50.0,
+                          ),
+                        ),
                       ),
                     ],
                   ),
