@@ -124,6 +124,7 @@ class MyApp extends StatelessWidget {
                 height: 30.0,
               ),
               Container(
+                clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
                   color: Colors.grey[700],
                   borderRadius: BorderRadius.circular(30.0),
@@ -133,43 +134,59 @@ class MyApp extends StatelessWidget {
                     vertical: 20.0,
                     horizontal: 25.0,
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
-                        'Euro',
-                        style: TextStyle(
-                          color: Colors.white70,
-                          fontSize: 25.0,
-                          fontWeight: FontWeight.w900,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 10.0,
-                      ),
-                      Row(
-                        children: const [
-                          Text(
-                            '6 000',
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Euro',
                             style: TextStyle(
                               color: Colors.white70,
-                              fontSize: 15.0,
-                              fontWeight: FontWeight.w600,
+                              fontSize: 25.0,
+                              fontWeight: FontWeight.w900,
                             ),
                           ),
-                          SizedBox(
-                            width: 15.0,
+                          const SizedBox(
+                            height: 10.0,
                           ),
-                          Text(
-                            'EUR',
-                            style: TextStyle(
-                              color: Colors.white70,
-                              fontSize: 15.0,
-                              fontWeight: FontWeight.w400,
-                            ),
+                          Row(
+                            children: const [
+                              Text(
+                                '6 000',
+                                style: TextStyle(
+                                  color: Colors.white70,
+                                  fontSize: 15.0,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 15.0,
+                              ),
+                              Text(
+                                'EUR',
+                                style: TextStyle(
+                                  color: Colors.white70,
+                                  fontSize: 15.0,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
-                      )
+                      ),
+                      Transform.translate(
+                        offset: const Offset(10.0, 10.0),
+                        child: Transform.scale(
+                          scale: 2.2,
+                          child: const Icon(
+                            Icons.euro_rounded,
+                            color: Colors.white,
+                            size: 60.0,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
